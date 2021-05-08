@@ -7,9 +7,9 @@
         "value": "CUSTOM:FadedPlains"
       }
     ],
-    "worldGenType": "Normal world gen",
+    "worldGenType": "End like gen",
     "mainFillerBlock": {
-      "value": "CUSTOM:FadedGrass"
+      "value": "Blocks.STONE#0"
     },
     "fluidBlock": {
       "value": "CUSTOM:FadedWater"
@@ -25,13 +25,19 @@
     "sleepResult": "ALLOW",
     "hasSkyLight": false,
     "imitateOverworldBehaviour": false,
+    "onPlayerEntersDimension": {
+      "name": "PlayerEntersFallenDimension"
+    },
+    "onPlayerLeavesDimension": {
+      "name": "PlayerLeavesFallen"
+    },
     "portalFrame": {
       "value": "CUSTOM:FadedObsidian"
     },
     "portalParticles": {
-      "value": "WHITE_ASH"
+      "value": "ASH"
     },
-    "portalLuminance": 3,
+    "portalLuminance": 5,
     "portalSound": {
       "value": "block.portal.ambient"
     },
@@ -40,7 +46,7 @@
       "value": "TOOLS"
     },
     "texture": "flint_and_steel",
-    "portalTexture": "crying_obsidian",
-    "enablePortal": true
+    "portalTexture": "beacon",
+    "enablePortal": false
   }
 }

@@ -50,11 +50,11 @@
     "settings": {
       "name": "fallen:fallen",
       "bedrock_roof_position": -10,
-      "bedrock_floor_position": 0,
-      "sea_level": 63,
+      "bedrock_floor_position": -10,
+      "sea_level": 0,
       "disable_mob_generation": true,
       "default_block": {
-        "Name": "fallen:faded_grass"
+        "Name": "minecraft:stone"
       },
       "default_fluid": {
         "Name": "fallen:faded_water",
@@ -63,31 +63,30 @@
         }
       },
       "noise": {
-        "min_y": 0,
-        "height": 256,
-        "density_factor": 1,
-        "density_offset": -0.46875,
-        "size_horizontal": 1,
-        "size_vertical": 2,
+        "density_factor": 0,
+        "density_offset": 0,
         "simplex_surface_noise": true,
-        "random_density_offset": true,
-        "island_noise_override": false,
+        "random_density_offset": false,
+        "island_noise_override": true,
         "amplified": false,
+        "size_horizontal": 2,
+        "size_vertical": 1,
+        "height": 128,
         "sampling": {
-          "xz_scale": 1,
+          "xz_scale": 2,
           "y_scale": 1,
           "xz_factor": 80,
           "y_factor": 160
         },
         "bottom_slide": {
           "target": -30,
-          "size": 0,
-          "offset": 0
+          "size": 7,
+          "offset": 1
         },
         "top_slide": {
-          "target": -10,
-          "size": 3,
-          "offset": 0
+          "target": -3000,
+          "size": 64,
+          "offset": -46
         }
       },
       "structures": {

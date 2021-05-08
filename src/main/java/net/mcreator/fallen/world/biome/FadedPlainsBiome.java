@@ -21,8 +21,8 @@ import net.minecraft.world.gen.feature.Feature;
 import net.minecraft.world.gen.feature.BaseTreeFeatureConfig;
 import net.minecraft.world.gen.blockstateprovider.SimpleBlockStateProvider;
 import net.minecraft.world.gen.GenerationStage;
-import net.minecraft.world.biome.SoundAdditionsAmbience;
 import net.minecraft.world.biome.ParticleEffectAmbience;
+import net.minecraft.world.biome.MoodSoundAmbience;
 import net.minecraft.world.biome.MobSpawnInfo;
 import net.minecraft.world.biome.DefaultBiomeFeatures;
 import net.minecraft.world.biome.BiomeGenerationSettings;
@@ -50,10 +50,10 @@ public class FadedPlainsBiome extends FallenModElements.ModElement {
 			if (biome == null) {
 				BiomeAmbience effects = new BiomeAmbience.Builder().setFogColor(-6710887).setWaterColor(4159204).setWaterFogColor(-6710887)
 						.withSkyColor(-6710887).withFoliageColor(10387789).withGrassColor(-6710887)
-						.setAdditionsSound(new SoundAdditionsAmbience(
+						.setMoodSound(new MoodSoundAmbience(
 								(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("fallen:creepy_wind")),
-								0.0111D))
-						.setParticle(new ParticleEffectAmbience(ParticleTypes.WHITE_ASH, 0.003f)).build();
+								6000, 8, 2))
+						.setParticle(new ParticleEffectAmbience(ParticleTypes.WHITE_ASH, 0.005f)).build();
 				BiomeGenerationSettings.Builder biomeGenerationSettings = new BiomeGenerationSettings.Builder()
 						.withSurfaceBuilder(SurfaceBuilder.DEFAULT.func_242929_a(new SurfaceBuilderConfig(FadedGrassBlock.block.getDefaultState(),
 								FadedDirtBlock.block.getDefaultState(), FadedDirtBlock.block.getDefaultState())));

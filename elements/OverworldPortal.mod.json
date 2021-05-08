@@ -2,7 +2,7 @@
   "_fv": 18,
   "_type": "block",
   "definition": {
-    "texture": "dirt",
+    "texture": "overworldportal",
     "textureTop": "",
     "textureLeft": "",
     "textureFront": "",
@@ -19,7 +19,7 @@
     "isItemTinted": false,
     "hasTransparency": false,
     "connectedSides": false,
-    "transparencyType": "SOLID",
+    "transparencyType": "TRANSLUCENT",
     "disableOffset": false,
     "boundingBoxes": [
       {
@@ -32,7 +32,7 @@
         "subtract": false
       }
     ],
-    "name": "Faded Dirt",
+    "name": "Overworld Portal",
     "specialInfo": [],
     "hardness": 1.0,
     "resistance": 10.0,
@@ -45,14 +45,14 @@
     "customDrop": {
       "value": ""
     },
-    "dropAmount": 1,
+    "dropAmount": 0,
     "useLootTableForDrops": false,
     "enchantPowerBonus": 0.0,
     "plantsGrowOn": false,
     "canProvidePower": false,
     "lightOpacity": 255,
     "material": {
-      "value": "EARTH"
+      "value": "BARRIER"
     },
     "tickRate": 10,
     "tickRandomly": false,
@@ -70,16 +70,16 @@
     "speedFactor": 1.0,
     "jumpFactor": 1.0,
     "reactionToPushing": "NORMAL",
-    "isNotColidable": false,
+    "isNotColidable": true,
     "soundOnStep": {
-      "value": "GROUND"
+      "value": "METAL"
     },
     "luminance": 0,
     "unbreakable": false,
     "breakHarvestLevel": 1,
-    "spawnParticles": false,
+    "spawnParticles": true,
     "particleToSpawn": {
-      "value": "EXPLOSION_NORMAL"
+      "value": "VILLAGER_HAPPY"
     },
     "particleSpawningShape": "Spread",
     "particleSpawningRadious": 0.5,
@@ -101,6 +101,12 @@
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
+    "onRightClicked": {
+      "name": "OverworldPortalOnClick"
+    },
+    "onEntityCollides": {
+      "name": "OverworldPortalEntityCollide"
+    },
     "spawnWorldTypes": [
       "CUSTOM:Fallen"
     ],
@@ -110,9 +116,9 @@
         "value": "Blocks.STONE#0"
       }
     ],
-    "frequencyPerChunks": 3,
-    "frequencyOnChunk": 4,
+    "frequencyPerChunks": 1,
+    "frequencyOnChunk": 1,
     "minGenerateHeight": 0,
-    "maxGenerateHeight": 64
+    "maxGenerateHeight": 256
   }
 }

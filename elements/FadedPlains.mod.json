@@ -25,20 +25,20 @@
       "value": ""
     },
     "additionsSound": {
-      "value": "CUSTOM:creepy_wind"
+      "value": ""
     },
     "music": {
       "value": ""
     },
     "moodSound": {
-      "value": ""
+      "value": "CUSTOM:creepy_wind"
     },
     "moodSoundDelay": 6000,
     "spawnParticles": true,
     "particleToSpawn": {
       "value": "WHITE_ASH"
     },
-    "particlesProbability": 0.3,
+    "particlesProbability": 0.5,
     "biomeCategory": "PLAINS",
     "parent": {
       "value": "No parent"

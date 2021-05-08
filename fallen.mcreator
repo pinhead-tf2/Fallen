@@ -74,19 +74,244 @@
       "registry_name": "faded_obsidian"
     },
     {
+      "name": "FallenPortal",
+      "type": "block",
+      "sortid": 8,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "fallen_portal"
+    },
+    {
+      "name": "FallenPortalOnClick",
+      "type": "procedure",
+      "sortid": 9,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "fallen_portal_on_click",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "FallenPortalEntityCollide",
+      "type": "procedure",
+      "sortid": 9,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "fallen_portal_entity_collide",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ReplaceVoidWithFallenPortal",
+      "type": "procedure",
+      "sortid": 8,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "replace_void_with_fallen_portal",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "PlayerEntersFallenDimension",
+      "type": "procedure",
+      "sortid": 10,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "player_enters_fallen_dimension",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
       "name": "Fallen",
       "type": "dimension",
-      "sortid": 2,
+      "sortid": 11,
       "compiles": true,
       "locked_code": false,
       "ids": {},
       "registry_name": "fallen",
       "metadata": {
-        "ep": true
+        "ep": false
       }
+    },
+    {
+      "name": "RecordPlayerSpawn",
+      "type": "procedure",
+      "sortid": 12,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "record_player_spawn",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          }
+        ]
+      }
+    },
+    {
+      "name": "PlayerLeavesFallen",
+      "type": "procedure",
+      "sortid": 12,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "player_leaves_fallen",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "OverworldPortalOnClick",
+      "type": "procedure",
+      "sortid": 13,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "overworld_portal_on_click",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "OverworldPortalEntityCollide",
+      "type": "procedure",
+      "sortid": 13,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "overworld_portal_entity_collide",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "OverworldPortal",
+      "type": "block",
+      "sortid": 13,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "overworld_portal"
     }
   ],
-  "variable_elements": [],
+  "variable_elements": [
+    {
+      "name": "hasVisitedFallen",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "playerInFallen",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "savedSleepCoordX",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "savedSleepCoordY",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "savedSleepCoordZ",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    }
+  ],
   "sound_elements": [
     {
       "name": "creepy_wind",
@@ -94,22 +319,24 @@
         "wind_sfx"
       ],
       "category": "ambient",
-      "subtitle": "Wind Blows"
+      "subtitle": "Wind blows"
     }
   ],
   "language_map": {
     "en_us": {
       "fluid.faded_water": "FadedWater",
       "item.fallen.faded_water_bucket": "FadedWater Bucket",
-      "biome.fallen.faded_plains": "Faded Plains",
       "itemGroup.tabfallen_blocks": "Fallen Blocks",
+      "block.fallen.fallen_portal": "Fallen Portal",
       "item.fallen.fallen": "Faded Flint \u0026 Steel",
+      "block.fallen.overworld_portal": "Overworld Portal",
+      "block.fallen.faded_oak_leaves": "Faded Oak Leaves",
+      "biome.fallen.faded_plains": "Faded Plains",
       "block.fallen.faded_grass": "Faded Grass",
       "block.fallen.faded_oak_log": "Faded Oak Log",
       "block.fallen.faded_dirt": "Faded Dirt",
-      "subtitles.creepy_wind": "Wind Blows",
-      "block.fallen.faded_obsidian": "Faded Obsidian",
-      "block.fallen.faded_oak_leaves": "Faded Oak Leaves"
+      "subtitles.creepy_wind": "Wind blows",
+      "block.fallen.faded_obsidian": "Faded Obsidian"
     }
   },
   "foldersRoot": {
