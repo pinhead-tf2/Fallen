@@ -1,0 +1,46 @@
+{
+  "_fv": 18,
+  "_type": "dimension",
+  "definition": {
+    "biomesInDimension": [
+      {
+        "value": "CUSTOM:FadedPlains"
+      }
+    ],
+    "worldGenType": "Normal world gen",
+    "mainFillerBlock": {
+      "value": "CUSTOM:FadedGrass"
+    },
+    "fluidBlock": {
+      "value": "CUSTOM:FadedWater"
+    },
+    "airColor": {
+      "value": -6710887,
+      "falpha": 0.0
+    },
+    "canRespawnHere": true,
+    "hasFog": true,
+    "isDark": false,
+    "doesWaterVaporize": false,
+    "sleepResult": "ALLOW",
+    "hasSkyLight": false,
+    "imitateOverworldBehaviour": false,
+    "portalFrame": {
+      "value": "CUSTOM:FadedObsidian"
+    },
+    "portalParticles": {
+      "value": "WHITE_ASH"
+    },
+    "portalLuminance": 3,
+    "portalSound": {
+      "value": "block.portal.ambient"
+    },
+    "igniterName": "Faded Flint & Steel",
+    "igniterTab": {
+      "value": "TOOLS"
+    },
+    "texture": "flint_and_steel",
+    "portalTexture": "crying_obsidian",
+    "enablePortal": true
+  }
+}

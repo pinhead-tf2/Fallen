@@ -1,0 +1,12 @@
+{
+  "creepy_wind": {
+    "category": "ambient",
+    "subtitle": "subtitles.creepy_wind",
+    "sounds": [
+      {
+        "name": "fallen:wind_sfx",
+        "stream": false
+      }
+    ]
+  }
+}

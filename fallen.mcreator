@@ -1,0 +1,137 @@
+{
+  "id_map": {},
+  "mod_elements": [
+    {
+      "name": "FallenBlocks",
+      "type": "tab",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "fallen_blocks"
+    },
+    {
+      "name": "FadedGrass",
+      "type": "block",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "faded_grass"
+    },
+    {
+      "name": "FadedWater",
+      "type": "fluid",
+      "sortid": 2,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "faded_water"
+    },
+    {
+      "name": "FadedDirt",
+      "type": "block",
+      "sortid": 3,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "faded_dirt"
+    },
+    {
+      "name": "FadedPlains",
+      "type": "biome",
+      "sortid": 4,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "faded_plains"
+    },
+    {
+      "name": "FadedOakLog",
+      "type": "block",
+      "sortid": 6,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "faded_oak_log"
+    },
+    {
+      "name": "FadedOakLeaves",
+      "type": "block",
+      "sortid": 6,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "faded_oak_leaves"
+    },
+    {
+      "name": "FadedObsidian",
+      "type": "block",
+      "sortid": 7,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "faded_obsidian"
+    },
+    {
+      "name": "Fallen",
+      "type": "dimension",
+      "sortid": 2,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "fallen",
+      "metadata": {
+        "ep": true
+      }
+    }
+  ],
+  "variable_elements": [],
+  "sound_elements": [
+    {
+      "name": "creepy_wind",
+      "files": [
+        "wind_sfx"
+      ],
+      "category": "ambient",
+      "subtitle": "Wind Blows"
+    }
+  ],
+  "language_map": {
+    "en_us": {
+      "fluid.faded_water": "FadedWater",
+      "item.fallen.faded_water_bucket": "FadedWater Bucket",
+      "biome.fallen.faded_plains": "Faded Plains",
+      "itemGroup.tabfallen_blocks": "Fallen Blocks",
+      "item.fallen.fallen": "Faded Flint \u0026 Steel",
+      "block.fallen.faded_grass": "Faded Grass",
+      "block.fallen.faded_oak_log": "Faded Oak Log",
+      "block.fallen.faded_dirt": "Faded Dirt",
+      "subtitles.creepy_wind": "Wind Blows",
+      "block.fallen.faded_obsidian": "Faded Obsidian",
+      "block.fallen.faded_oak_leaves": "Faded Oak Leaves"
+    }
+  },
+  "foldersRoot": {
+    "name": "~",
+    "children": []
+  },
+  "workspaceSettings": {
+    "modid": "fallen",
+    "modName": "Fallen",
+    "version": "1.0.0",
+    "author": "mrmax, MCreator",
+    "websiteURL": "https://mcreator.net",
+    "license": "Academic Free License v3.0",
+    "disableForgeVersionCheck": true,
+    "serverSideOnly": false,
+    "requiredMods": [],
+    "dependencies": [],
+    "dependants": [],
+    "mcreatorDependencies": [],
+    "currentGenerator": "forge-1.16.5",
+    "modElementsPackage": "net.mcreator.fallen",
+    "lockBaseModFiles": false
+  },
+  "mcreatorVersion": 202100118117
+}

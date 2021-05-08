@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "fallen:blocks/oak_leaves",
+    "particle": "fallen:blocks/oak_leaves"
+  }
+}

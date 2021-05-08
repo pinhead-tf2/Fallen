@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "axis=z": {
+      "model": "fallen:block/fallen_portal_ew"
+    },
+    "axis=x": {
+      "model": "fallen:block/fallen_portal_ns"
+    }
+  }
+}

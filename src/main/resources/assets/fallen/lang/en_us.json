@@ -1,0 +1,13 @@
+{
+  "fluid.faded_water": "FadedWater",
+  "item.fallen.faded_water_bucket": "FadedWater Bucket",
+  "biome.fallen.faded_plains": "Faded Plains",
+  "itemGroup.tabfallen_blocks": "Fallen Blocks",
+  "item.fallen.fallen": "Faded Flint \u0026 Steel",
+  "block.fallen.faded_grass": "Faded Grass",
+  "block.fallen.faded_oak_log": "Faded Oak Log",
+  "block.fallen.faded_dirt": "Faded Dirt",
+  "subtitles.creepy_wind": "Wind Blows",
+  "block.fallen.faded_obsidian": "Faded Obsidian",
+  "block.fallen.faded_oak_leaves": "Faded Oak Leaves"
+}
