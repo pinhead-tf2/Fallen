@@ -37,10 +37,10 @@ import net.mcreator.fallen.block.FadedDirtBlock;
 import net.mcreator.fallen.FallenModElements;
 
 @FallenModElements.ModElement.Tag
-public class FadedPlainsBiome extends FallenModElements.ModElement {
+public class FadedForestBiome extends FallenModElements.ModElement {
 	public static Biome biome;
-	public FadedPlainsBiome(FallenModElements instance) {
-		super(instance, 4);
+	public FadedForestBiome(FallenModElements instance) {
+		super(instance, 14);
 		FMLJavaModLoadingContext.get().getModEventBus().register(new BiomeRegisterHandler());
 	}
 	private static class BiomeRegisterHandler {
@@ -52,7 +52,7 @@ public class FadedPlainsBiome extends FallenModElements.ModElement {
 						.setMoodSound(new MoodSoundAmbience(
 								(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("fallen:creepy_wind")),
 								3000, 8, 2))
-						.setParticle(new ParticleEffectAmbience(ParticleTypes.WHITE_ASH, 0.005f)).build();
+						.setParticle(new ParticleEffectAmbience(ParticleTypes.ASH, 0.005f)).build();
 				BiomeGenerationSettings.Builder biomeGenerationSettings = new BiomeGenerationSettings.Builder()
 						.withSurfaceBuilder(SurfaceBuilder.DEFAULT.func_242929_a(new SurfaceBuilderConfig(FadedGrassBlock.block.getDefaultState(),
 								FadedDirtBlock.block.getDefaultState(), FadedDirtBlock.block.getDefaultState())));
@@ -62,7 +62,7 @@ public class FadedPlainsBiome extends FallenModElements.ModElement {
 								new AcaciaFoliagePlacer(FeatureSpread.func_242252_a(2), FeatureSpread.func_242252_a(0)),
 								new ForkyTrunkPlacer(7, 2, 2), new TwoLayerFeature(1, 0, 2))).setIgnoreVines().setMaxWaterDepth(0).build())
 						.withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
-						.withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(1, 0.1F, 1))));
+						.withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(3, 0.1F, 1))));
 				biomeGenerationSettings.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION,
 						Feature.RANDOM_PATCH.withConfiguration(Features.Configs.GRASS_PATCH_CONFIG).withPlacement(Features.Placements.PATCH_PLACEMENT)
 								.withPlacement(Placement.COUNT_NOISE.configure(new NoiseDependant(-0.8D, 5, 4))));
@@ -70,7 +70,7 @@ public class FadedPlainsBiome extends FallenModElements.ModElement {
 				biome = new Biome.Builder().precipitation(Biome.RainType.RAIN).category(Biome.Category.PLAINS).depth(0.1f).scale(0.2f)
 						.temperature(0.8f).downfall(0.5f).setEffects(effects).withMobSpawnSettings(mobSpawnInfo.copy())
 						.withGenerationSettings(biomeGenerationSettings.build()).build();
-				event.getRegistry().register(biome.setRegistryName("fallen:faded_plains"));
+				event.getRegistry().register(biome.setRegistryName("fallen:faded_forest"));
 			}
 		}
 	}

@@ -2,7 +2,7 @@
   "_fv": 18,
   "_type": "biome",
   "definition": {
-    "name": "Faded Plains",
+    "name": "Faded Forest",
     "groundBlock": {
       "value": "CUSTOM:FadedGrass"
     },
@@ -36,7 +36,7 @@
     "moodSoundDelay": 3000,
     "spawnParticles": true,
     "particleToSpawn": {
-      "value": "WHITE_ASH"
+      "value": "ASH"
     },
     "particlesProbability": 0.5,
     "biomeCategory": "PLAINS",
@@ -60,7 +60,7 @@
     "gravelPatchesPerChunk": 0,
     "reedsPerChunk": 0,
     "cactiPerChunk": 0,
-    "treesPerChunk": 1,
+    "treesPerChunk": 3,
     "vanillaTreeType": "Savanna trees",
     "treeType": 1,
     "minHeight": 7,

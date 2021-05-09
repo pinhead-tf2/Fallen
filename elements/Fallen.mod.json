@@ -5,6 +5,9 @@
     "biomesInDimension": [
       {
         "value": "CUSTOM:FadedPlains"
+      },
+      {
+        "value": "CUSTOM:FadedForest"
       }
     ],
     "worldGenType": "End like gen",
@@ -32,21 +35,21 @@
       "name": "PlayerLeavesFallen"
     },
     "portalFrame": {
-      "value": "CUSTOM:FadedObsidian"
+      "value": ""
     },
     "portalParticles": {
-      "value": "ASH"
+      "value": "EXPLOSION_NORMAL"
     },
-    "portalLuminance": 5,
+    "portalLuminance": 0,
     "portalSound": {
-      "value": "block.portal.ambient"
+      "value": ""
     },
-    "igniterName": "Faded Flint & Steel",
+    "igniterName": "",
     "igniterTab": {
-      "value": "TOOLS"
+      "value": "No creative tab entry"
     },
-    "texture": "flint_and_steel",
-    "portalTexture": "beacon",
+    "texture": "",
+    "portalTexture": "",
     "enablePortal": false
   }
 }

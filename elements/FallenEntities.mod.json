@@ -2,9 +2,9 @@
   "_fv": 18,
   "_type": "tab",
   "definition": {
-    "name": "Fallen Blocks",
+    "name": "Fallen Entities",
     "icon": {
-      "value": "CUSTOM:FadedGrass"
+      "value": "CUSTOM:FadedDirt"
     },
     "showSearch": true
   }

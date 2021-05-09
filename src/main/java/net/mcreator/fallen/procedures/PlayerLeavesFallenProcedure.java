@@ -23,13 +23,6 @@ public class PlayerLeavesFallenProcedure extends FallenModElements.ModElement {
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");
-		{
-			boolean _setval = (boolean) (false);
-			entity.getCapability(FallenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-				capability.hasVisitedFallen = _setval;
-				capability.syncPlayerVariables(entity);
-			});
-		}
 		if (entity instanceof ServerPlayerEntity)
 			((ServerPlayerEntity) entity).func_242111_a(((ServerPlayerEntity) entity).world.getDimensionKey(),
 					new BlockPos(

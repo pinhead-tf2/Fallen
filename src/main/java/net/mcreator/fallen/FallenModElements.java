@@ -47,6 +47,7 @@ public class FallenModElements {
 	public static Map<ResourceLocation, net.minecraft.util.SoundEvent> sounds = new HashMap<>();
 	public FallenModElements() {
 		sounds.put(new ResourceLocation("fallen", "creepy_wind"), new net.minecraft.util.SoundEvent(new ResourceLocation("fallen", "creepy_wind")));
+		sounds.put(new ResourceLocation("fallen", "howling_wind"), new net.minecraft.util.SoundEvent(new ResourceLocation("fallen", "howling_wind")));
 		try {
 			ModFileScanData modFileInfo = ModList.get().getModFileById("fallen").getFile().getScanResult();
 			Set<ModFileScanData.AnnotationData> annotations = modFileInfo.getAnnotations();

@@ -4,7 +4,25 @@
     "subtitle": "subtitles.creepy_wind",
     "sounds": [
       {
+        "name": "fallen:wind_sfx_long",
+        "stream": false
+      },
+      {
         "name": "fallen:wind_sfx",
+        "stream": false
+      }
+    ]
+  },
+  "howling_wind": {
+    "category": "ambient",
+    "subtitle": "subtitles.howling_wind",
+    "sounds": [
+      {
+        "name": "fallen:wind_howl_sfx",
+        "stream": false
+      },
+      {
+        "name": "fallen:wind_howl_sfx2",
         "stream": false
       }
     ]

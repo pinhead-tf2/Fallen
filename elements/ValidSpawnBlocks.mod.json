@@ -1,0 +1,17 @@
+{
+  "_fv": 18,
+  "_type": "tag",
+  "definition": {
+    "type": "Blocks",
+    "items": [],
+    "blocks": [
+      {
+        "value": "CUSTOM:FadedGrass"
+      }
+    ],
+    "functions": [],
+    "entities": [],
+    "name": "valid_spawn",
+    "namespace": "minecraft"
+  }
+}

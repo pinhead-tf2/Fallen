@@ -65,15 +65,6 @@
       "registry_name": "faded_oak_leaves"
     },
     {
-      "name": "FadedObsidian",
-      "type": "block",
-      "sortid": 7,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "faded_obsidian"
-    },
-    {
       "name": "FallenPortal",
       "type": "block",
       "sortid": 8,
@@ -158,18 +149,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
           },
           {
             "name": "world",
@@ -278,17 +257,136 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "overworld_portal"
+    },
+    {
+      "name": "DirtBlocks",
+      "type": "tag",
+      "sortid": 14,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "dirt_blocks"
+    },
+    {
+      "name": "LogBlocks",
+      "type": "tag",
+      "sortid": 15,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "log_blocks"
+    },
+    {
+      "name": "ValidSpawnBlocks",
+      "type": "tag",
+      "sortid": 16,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "valid_spawn_blocks"
+    },
+    {
+      "name": "LeaveBlocks",
+      "type": "tag",
+      "sortid": 17,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "leave_blocks"
+    },
+    {
+      "name": "FadedForest",
+      "type": "biome",
+      "sortid": 14,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "faded_forest"
+    },
+    {
+      "name": "ObserverOnSpawn",
+      "type": "procedure",
+      "sortid": 18,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "observer_on_spawn",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "FallenEntities",
+      "type": "tab",
+      "sortid": 19,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "fallen_entities"
+    },
+    {
+      "name": "Observer",
+      "type": "mob",
+      "sortid": 18,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "observer"
+    },
+    {
+      "name": "IsFirstTimeJoining",
+      "type": "procedure",
+      "sortid": 20,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "is_first_time_joining",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [
     {
       "name": "hasVisitedFallen",
-      "type": "logic",
-      "scope": "player_persistent",
-      "value": "false"
-    },
-    {
-      "name": "playerInFallen",
       "type": "logic",
       "scope": "player_persistent",
       "value": "false"
@@ -310,16 +408,32 @@
       "type": "number",
       "scope": "player_persistent",
       "value": "0"
+    },
+    {
+      "name": "newToWorld",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "true"
     }
   ],
   "sound_elements": [
     {
       "name": "creepy_wind",
       "files": [
+        "wind_sfx_long",
         "wind_sfx"
       ],
       "category": "ambient",
       "subtitle": "Wind blows"
+    },
+    {
+      "name": "howling_wind",
+      "files": [
+        "wind_howl_sfx",
+        "wind_howl_sfx2"
+      ],
+      "category": "ambient",
+      "subtitle": "Wind howls"
     }
   ],
   "language_map": {
@@ -328,15 +442,19 @@
       "item.fallen.faded_water_bucket": "FadedWater Bucket",
       "itemGroup.tabfallen_blocks": "Fallen Blocks",
       "block.fallen.fallen_portal": "Fallen Portal",
-      "item.fallen.fallen": "Faded Flint \u0026 Steel",
+      "item.fallen.fallen": "",
       "block.fallen.overworld_portal": "Overworld Portal",
+      "entity.fallen.observer": "Observer",
       "block.fallen.faded_oak_leaves": "Faded Oak Leaves",
+      "itemGroup.tabfallen_entities": "Fallen Entities",
       "biome.fallen.faded_plains": "Faded Plains",
       "block.fallen.faded_grass": "Faded Grass",
+      "biome.fallen.faded_forest": "Faded Forest",
+      "item.fallen.observer_spawn_egg": "Observer Spawn Egg",
+      "subtitles.howling_wind": "Wind howls",
       "block.fallen.faded_oak_log": "Faded Oak Log",
       "block.fallen.faded_dirt": "Faded Dirt",
-      "subtitles.creepy_wind": "Wind blows",
-      "block.fallen.faded_obsidian": "Faded Obsidian"
+      "subtitles.creepy_wind": "Wind blows"
     }
   },
   "foldersRoot": {
@@ -346,8 +464,8 @@
   "workspaceSettings": {
     "modid": "fallen",
     "modName": "Fallen",
-    "version": "1.0.0",
-    "author": "mrmax, MCreator",
+    "version": "0.1",
+    "author": "pinhead",
     "websiteURL": "https://mcreator.net",
     "license": "Academic Free License v3.0",
     "disableForgeVersionCheck": true,
@@ -357,6 +475,7 @@
     "dependants": [],
     "mcreatorDependencies": [],
     "currentGenerator": "forge-1.16.5",
+    "credits": "Created using mod maker MCreator - https://mcreator.net/about",
     "modElementsPackage": "net.mcreator.fallen",
     "lockBaseModFiles": false
   },

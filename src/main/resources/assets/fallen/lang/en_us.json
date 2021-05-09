@@ -3,13 +3,17 @@
   "item.fallen.faded_water_bucket": "FadedWater Bucket",
   "itemGroup.tabfallen_blocks": "Fallen Blocks",
   "block.fallen.fallen_portal": "Fallen Portal",
-  "item.fallen.fallen": "Faded Flint \u0026 Steel",
+  "item.fallen.fallen": "",
   "block.fallen.overworld_portal": "Overworld Portal",
+  "entity.fallen.observer": "Observer",
   "block.fallen.faded_oak_leaves": "Faded Oak Leaves",
+  "itemGroup.tabfallen_entities": "Fallen Entities",
   "biome.fallen.faded_plains": "Faded Plains",
   "block.fallen.faded_grass": "Faded Grass",
+  "biome.fallen.faded_forest": "Faded Forest",
+  "item.fallen.observer_spawn_egg": "Observer Spawn Egg",
+  "subtitles.howling_wind": "Wind howls",
   "block.fallen.faded_oak_log": "Faded Oak Log",
   "block.fallen.faded_dirt": "Faded Dirt",
-  "subtitles.creepy_wind": "Wind blows",
-  "block.fallen.faded_obsidian": "Faded Obsidian"
+  "subtitles.creepy_wind": "Wind blows"
 }

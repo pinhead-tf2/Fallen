@@ -68,10 +68,10 @@ public class FallenModVariables {
 		public INBT writeNBT(Capability<PlayerVariables> capability, PlayerVariables instance, Direction side) {
 			CompoundNBT nbt = new CompoundNBT();
 			nbt.putBoolean("hasVisitedFallen", instance.hasVisitedFallen);
-			nbt.putBoolean("playerInFallen", instance.playerInFallen);
 			nbt.putDouble("savedSleepCoordX", instance.savedSleepCoordX);
 			nbt.putDouble("savedSleepCoordY", instance.savedSleepCoordY);
 			nbt.putDouble("savedSleepCoordZ", instance.savedSleepCoordZ);
+			nbt.putBoolean("newToWorld", instance.newToWorld);
 			return nbt;
 		}
 
@@ -79,19 +79,19 @@ public class FallenModVariables {
 		public void readNBT(Capability<PlayerVariables> capability, PlayerVariables instance, Direction side, INBT inbt) {
 			CompoundNBT nbt = (CompoundNBT) inbt;
 			instance.hasVisitedFallen = nbt.getBoolean("hasVisitedFallen");
-			instance.playerInFallen = nbt.getBoolean("playerInFallen");
 			instance.savedSleepCoordX = nbt.getDouble("savedSleepCoordX");
 			instance.savedSleepCoordY = nbt.getDouble("savedSleepCoordY");
 			instance.savedSleepCoordZ = nbt.getDouble("savedSleepCoordZ");
+			instance.newToWorld = nbt.getBoolean("newToWorld");
 		}
 	}
 
 	public static class PlayerVariables {
 		public boolean hasVisitedFallen = false;
-		public boolean playerInFallen = false;
 		public double savedSleepCoordX = 0;
 		public double savedSleepCoordY = 0;
 		public double savedSleepCoordZ = 0;
+		public boolean newToWorld = true;
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayerEntity)
 				FallenMod.PACKET_HANDLER.send(PacketDistributor.PLAYER.with(() -> (ServerPlayerEntity) entity), new PlayerVariablesSyncMessage(this));
@@ -124,10 +124,10 @@ public class FallenModVariables {
 				.orElse(new PlayerVariables()));
 		PlayerVariables clone = ((PlayerVariables) event.getEntity().getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables()));
 		clone.hasVisitedFallen = original.hasVisitedFallen;
-		clone.playerInFallen = original.playerInFallen;
 		clone.savedSleepCoordX = original.savedSleepCoordX;
 		clone.savedSleepCoordY = original.savedSleepCoordY;
 		clone.savedSleepCoordZ = original.savedSleepCoordZ;
+		clone.newToWorld = original.newToWorld;
 		if (!event.isWasDeath()) {
 		}
 	}
@@ -153,10 +153,10 @@ public class FallenModVariables {
 					PlayerVariables variables = ((PlayerVariables) Minecraft.getInstance().player.getCapability(PLAYER_VARIABLES_CAPABILITY, null)
 							.orElse(new PlayerVariables()));
 					variables.hasVisitedFallen = message.data.hasVisitedFallen;
-					variables.playerInFallen = message.data.playerInFallen;
 					variables.savedSleepCoordX = message.data.savedSleepCoordX;
 					variables.savedSleepCoordY = message.data.savedSleepCoordY;
 					variables.savedSleepCoordZ = message.data.savedSleepCoordZ;
+					variables.newToWorld = message.data.newToWorld;
 				}
 			});
 			context.setPacketHandled(true);
