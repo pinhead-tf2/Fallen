@@ -65,7 +65,7 @@ public class FadedPlainsBiome extends FallenModElements.ModElement {
 						.withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(1, 0.1F, 1))));
 				biomeGenerationSettings.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION,
 						Feature.RANDOM_PATCH.withConfiguration(Features.Configs.GRASS_PATCH_CONFIG).withPlacement(Features.Placements.PATCH_PLACEMENT)
-								.withPlacement(Placement.COUNT_NOISE.configure(new NoiseDependant(-0.8D, 5, 4))));
+								.withPlacement(Placement.COUNT_NOISE.configure(new NoiseDependant(-0.8D, 5, 6))));
 				MobSpawnInfo.Builder mobSpawnInfo = new MobSpawnInfo.Builder().isValidSpawnBiomeForPlayer();
 				biome = new Biome.Builder().precipitation(Biome.RainType.RAIN).category(Biome.Category.PLAINS).depth(0.1f).scale(0.2f)
 						.temperature(0.8f).downfall(0.5f).setEffects(effects).withMobSpawnSettings(mobSpawnInfo.copy())

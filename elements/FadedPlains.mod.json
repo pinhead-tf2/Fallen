@@ -51,7 +51,7 @@
     "spawnBiome": false,
     "biomeWeight": 10,
     "biomeDictionaryTypes": [],
-    "grassPerChunk": 4,
+    "grassPerChunk": 6,
     "seagrassPerChunk": 0,
     "flowersPerChunk": 0,
     "mushroomsPerChunk": 0,

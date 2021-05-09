@@ -9,6 +9,7 @@ import net.mcreator.fallen.FallenModElements;
 import net.mcreator.fallen.FallenMod;
 
 import java.util.Map;
+import java.util.Collections;
 
 @FallenModElements.ModElement.Tag
 public class PlayerLeavesFallenProcedure extends FallenModElements.ModElement {
@@ -33,5 +34,25 @@ public class PlayerLeavesFallenProcedure extends FallenModElements.ModElement {
 							(int) ((entity.getCapability(FallenModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 									.orElse(new FallenModVariables.PlayerVariables())).savedSleepCoordZ)),
 					0, true, false);
+		{
+			Entity _ent = entity;
+			_ent.setPositionAndUpdate(
+					((entity.getCapability(FallenModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+							.orElse(new FallenModVariables.PlayerVariables())).savedSleepCoordX),
+					((entity.getCapability(FallenModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+							.orElse(new FallenModVariables.PlayerVariables())).savedSleepCoordY),
+					((entity.getCapability(FallenModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+							.orElse(new FallenModVariables.PlayerVariables())).savedSleepCoordZ));
+			if (_ent instanceof ServerPlayerEntity) {
+				((ServerPlayerEntity) _ent).connection.setPlayerLocation(
+						((entity.getCapability(FallenModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+								.orElse(new FallenModVariables.PlayerVariables())).savedSleepCoordX),
+						((entity.getCapability(FallenModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+								.orElse(new FallenModVariables.PlayerVariables())).savedSleepCoordY),
+						((entity.getCapability(FallenModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+								.orElse(new FallenModVariables.PlayerVariables())).savedSleepCoordZ),
+						_ent.rotationYaw, _ent.rotationPitch, Collections.emptySet());
+			}
+		}
 	}
 }
